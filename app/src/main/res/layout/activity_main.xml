@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8D00CC"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="1200px"
+        android:orientation="vertical"
+        android:background="@layout/curved_shape">
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cloud_sun_solid"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="27°C"
+            android:textColor="#000000"
+            android:fontFamily="@font/customfont"
+            android:textSize="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/weatherIcon"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600px"
+        android:layout_below="@id/linearlayout"
+        android:background="@layout/bottom_shape">
+
+    </LinearLayout>
+
+</RelativeLayout>

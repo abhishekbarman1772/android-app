@@ -1,45 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8D00CC"
-    tools:context=".MainActivity">
+    android:background="#000000"
+    android:weightSum="100"
+    android:layout_gravity="bottom"
+    tools:context="com.example.newsandweatherapp.MainActivity">
+
 
     <LinearLayout
-        android:id="@+id/linearlayout"
-        android:layout_width="match_parent"
-        android:layout_height="1200px"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:background="@layout/curved_shape">
-        <ImageView
-            android:id="@+id/weatherIcon"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="200dp"
-            android:layout_gravity="center"
-            android:src="@drawable/cloud_sun_solid"
+        android:layout_gravity="bottom"
+        android:weightSum="100">
 
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="27°C"
-            android:textColor="#000000"
-            android:fontFamily="@font/customfont"
-            android:textSize="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/weatherIcon"
-            android:layout_gravity="center"
-            />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="600px"
-        android:layout_below="@id/linearlayout"
-        android:background="@layout/bottom_shape">
+        <LinearLayout
+            android:id="@+id/upperLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="75" >
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_chettan_regular"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#F5EEEE"
+                android:layout_gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_chettan_regular"
+                android:textColor="#F3F2F2"
+                android:textSize="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+
+                />
+
+            <ImageView
+                android:id="@+id/weatherIcon"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/rain_sun"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27°C"
+                android:textColor="#F3F3EFEF"
+                android:fontFamily="@font/customfont"
+                android:textSize="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/weatherIcon"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/upperLayout"
+            android:layout_weight="25">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
 
     </LinearLayout>
 

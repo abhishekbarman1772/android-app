@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listItemLayout"
+    android:layout_width="170dp"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp">
+
+    <TextView
+        android:id="@+id/weekDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Sunday"
+        android:textColor="#E0D9D9"
+        android:elevation="5dp"
+        android:shadowColor="#4D4D4D"
+        android:fontFamily="@font/baloo_chettan_regular"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/futureWeatherIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/cloud_sun_solid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/weekDays" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/listSubLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/futureWeatherIcon">
+
+        <TextView
+            android:id="@+id/minTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textColor="#000"
+            android:fontFamily="@font/baloo_chettan_regular"
+            android:text="Min: 19°C" />
+        <TextView
+            android:id="@+id/maxTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000"
+            android:fontFamily="@font/baloo_chettan_regular"
+            android:text="Max: 27°C" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

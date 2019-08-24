@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getWindow().getDecorView().setBackgroundColor(Color.WHITE);
         webView = findViewById(R.id.webView);
-        webView.setBackgroundColor(Color.TRANSPARENT); //for gif without background
+        webView.setBackgroundColor(Color.TRANSPARENT); //for svg without background
         webView.loadUrl("file:///android_asset/cloud.html");
         final LinearLayout l = findViewById(R.id.upperLayout);
         final LinearLayout b=findViewById(R.id.bottomLayout);
@@ -74,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
 
         Timer timer = new Timer();
         long interval = (1000) ; // 1 sec
-
+        try {
         timer.schedule( new TimerTask() {
 
 
             public void run() {
                 while (true) {
-                    try {
+
                         int hour =cal.get(Calendar.HOUR_OF_DAY);
                         int min =cal.get(Calendar.MINUTE);
 
@@ -115,15 +115,16 @@ public class MainActivity extends AppCompatActivity {
 
                     } }
 
-                    catch (Exception e)
-                    {
-                        // Throwing an exception
-                        Toast.makeText(getApplicationContext(),"background theme exception",Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
 
-        }, 0, interval);
+                }
+            },0,interval);
+
+         }
+        catch (Exception e)
+        {
+            // Throwing an exception
+            Toast.makeText(getApplicationContext(),"background theme exception",Toast.LENGTH_SHORT).show();
+        }
 
 
 

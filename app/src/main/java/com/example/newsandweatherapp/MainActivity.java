@@ -137,40 +137,40 @@ public class MainActivity extends AppCompatActivity {
         String dat = day + "/" + (month+1) + "/" + year;
         switch (month+1) {
             case 1:
-                dat = "January, " + day + ", " + year;
+                dat = "January- " + day + "- " + year;
                 break;
             case 2:
-                dat = "February, " + day + ", " + year;
+                dat = "February- " + day + "- " + year;
                 break;
             case 3:
-                dat = "March, " + day + ", " + year;
+                dat = "March- " + day + "- " + year;
                 break;
             case 4:
-                dat = "April, " + day + ", " + year;
+                dat = "April- " + day + "- " + year;
                 break;
             case 5:
-                dat = "May, " + day + ", " + year;
+                dat = "May- " + day + "- " + year;
                 break;
             case 6:
-                dat = "June, " + day + ", " + year;
+                dat = "June- " + day + "- " + year;
                 break;
             case 7:
-                dat = "July, " + day + ", " + year;
+                dat = "July- " + day + "- " + year;
                 break;
             case 8:
-                dat = "August, " + day + ", " + year;
+                dat = "August- " + day + "- " + year;
                 break;
             case 9:
-                dat = "September, " + day + ", " + year;
+                dat = "September- " + day + "- " + year;
                 break;
             case 10:
-                dat = "October, " + day + ", " + year;
+                dat = "October- " + day + "- " + year;
                 break;
             case 11:
-                dat = "November, " + day + ", " + year;
+                dat = "November- " + day + "- " + year;
                 break;
             case 12:
-                dat = "December, " + day + ", " + year;
+                dat = "December- " + day + "- " + year;
                 break;
                 default:
                     break;

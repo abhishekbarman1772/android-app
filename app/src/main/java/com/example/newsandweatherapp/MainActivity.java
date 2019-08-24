@@ -11,6 +11,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.util.Range;
+import android.view.Window;
+import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -38,14 +40,20 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager manager;
     private RecyclerView.Adapter adapter;
+    private WebView webView;
     Range<Integer> nr = Range.create(0,5);
     Range<Integer> dayr = Range.create(18,24);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
         getWindow().getDecorView().setBackgroundColor(Color.WHITE);
-        final LinearLayout l=findViewById(R.id.upperLayout);
+        webView = findViewById(R.id.webView);
+        webView.setBackgroundColor(Color.TRANSPARENT); //for gif without background
+        webView.loadUrl("file:///android_asset/cloud.html");
+        final LinearLayout l = findViewById(R.id.upperLayout);
         final LinearLayout b=findViewById(R.id.bottomLayout);
         relativeLayout=findViewById(R.id.listItemLayout);
 
@@ -71,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
 
 
             public void run() {
-
                 while (true) {
                     try {
                         int hour =cal.get(Calendar.HOUR_OF_DAY);
@@ -115,7 +122,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
+
         }, 0, interval);
+
 
 
 

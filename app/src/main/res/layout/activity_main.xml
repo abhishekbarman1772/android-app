@@ -8,13 +8,13 @@
     android:layout_gravity="bottom"
     tools:context="com.example.newsandweatherapp.MainActivity">
 
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:layout_gravity="bottom"
         android:weightSum="100">
+
 
 
         <LinearLayout
@@ -47,16 +47,19 @@
                 android:layout_gravity="center"
 
                 />
-
-            <ImageView
+            <!--<ImageView
                 android:id="@+id/weatherIcon"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="50dp"
                 android:layout_gravity="center"
-                android:src="@drawable/rain_sun"
-
-                />
+                android:src="@layout/cloud"/>-->
+            <WebView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/webView"
+                android:layout_gravity="center_horizontal"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,7 +68,7 @@
                 android:fontFamily="@font/customfont"
                 android:textSize="60dp"
                 android:layout_marginTop="10dp"
-                android:layout_below="@id/weatherIcon"
+                android:layout_below="@id/webView"
                 android:layout_gravity="center"
                 />
         </LinearLayout>
@@ -86,6 +89,6 @@
         </LinearLayout>
 
 
-    </LinearLayout>
+</LinearLayout>
 
 </RelativeLayout>
